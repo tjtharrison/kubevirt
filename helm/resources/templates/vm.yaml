@@ -26,6 +26,7 @@ spec:
         resources:
           requests:
             memory: 512M
+            storage: 10Gi
       networks:
       - name: default
         pod: {}
