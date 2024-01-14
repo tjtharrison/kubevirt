@@ -1,12 +1,10 @@
 helm-charts:
-  namespace: default
-  # ingresses:
-  #   - name: cdi-uploadproxy
-  #     commonName: cdi-upload.tjth.co
-  #     secretName: cdi-upload-tjth-co
-  #     port: 8443
-  #     selector:
-  #       cdi.kubevirt.io: cdi-uploadproxy
-  pvcs:
-    - name: eck-storage
-      storage: 10Gi
+  namespace: cdi
+  ingresses:
+    - name: cdi-uploadproxy
+      commonName: cdi-upload.tjth.co
+      secretName: cdi-upload-tjth-co
+      port: 8443
+      selector:
+        cdi.kubevirt.io: cdi-uploadproxy
+  
