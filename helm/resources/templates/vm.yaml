@@ -20,8 +20,6 @@ spec:
             - name: cloudinitdisk
               disk:
                 bus: virtio
-            - name: eck-storage
-              disk: {}
           interfaces:
           - name: default
             masquerade: {}
@@ -39,6 +37,3 @@ spec:
           cloudInitNoCloud:
             secretRef:
               name: vm-user-data
-        - name: eck-storage
-          persistentVolumeClaim:
-            claimName: eck-storage
